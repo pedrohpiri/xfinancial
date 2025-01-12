@@ -45,10 +45,53 @@
         <div>
           <h3 class="text-lg font-semibold mb-4 text-text-primary">Links Rápidos</h3>
           <ul class="space-y-2">
-            <li v-for="item in navigationItems" :key="item.name">
-              <a :href="item.href" class="text-text-secondary hover:text-primary transition-colors">
-                {{ item.name }}
-              </a>
+            <li>
+              <router-link 
+                to="/sobre" 
+                class="text-text-secondary hover:text-primary transition-colors"
+              >
+                Sobre
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/recursos" 
+                class="text-text-secondary hover:text-primary transition-colors"
+              >
+                Recursos
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/precos" 
+                class="text-text-secondary hover:text-primary transition-colors"
+              >
+                Preços
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/contato" 
+                class="text-text-secondary hover:text-primary transition-colors"
+              >
+                Contato
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/politicas-de-privacidade" 
+                class="text-text-secondary hover:text-primary transition-colors"
+              >
+                Política de Privacidade
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/termos-e-condicoes" 
+                class="text-text-secondary hover:text-primary transition-colors"
+              >
+                Termos de Uso
+              </router-link>
             </li>
           </ul>
         </div>
@@ -85,21 +128,6 @@
       <div class="mt-8 pt-8 border-t border-primary/10 text-center text-text-secondary">
         <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p>&copy; {{ new Date().getFullYear() }} X Financial. Todos os direitos reservados.</p>
-          <div class="flex items-center space-x-4">
-            <!-- Ajuste aqui para usar router-link -->
-            <router-link 
-              to="/politicas-de-privacidade" 
-              class="hover:text-primary transition-colors"
-            >
-              Política de Privacidade
-            </router-link>
-            <router-link 
-              to="/termos-e-condicoes" 
-              class="hover:text-primary transition-colors"
-            >
-              Termos de Uso
-            </router-link>
-          </div>
         </div>
       </div>
     </div>
@@ -109,11 +137,4 @@
 <script setup lang="ts">
 import { EnvelopeIcon } from '@heroicons/vue/24/outline';
 import { Instagram as InstagramIcon, Youtube as YoutubeIcon, MessageSquare as MessageSquareIcon } from 'lucide-vue-next';
-
-const navigationItems = [
-  { name: 'Sobre', href: '#about' },
-  { name: 'Recursos', href: '#features' },
-  { name: 'Preços', href: '#pricing' },
-  { name: 'Contato', href: '#contact' },
-];
 </script>

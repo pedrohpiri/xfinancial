@@ -12,7 +12,7 @@
             ]"
             :title="item.name"
             target="_blank" 
-            rel="noopener noreferrer" <!-- Segurança ao abrir em nova aba -->
+            rel="noopener noreferrer"
           ></a>
         </li>
       </ul>
@@ -29,6 +29,6 @@ const navigationItems = [
   { name: 'Recursos', href: '#features' },
   { name: 'Preços', href: '#pricing' },
   { name: 'Contato', href: '#contact' },
-  { name: 'Começar Agora', href: 'https://store.nelogica.com.br/category/copy-invest/details/14183' } // Novo item
+  { name: 'Começar Agora', href: 'https://store.nelogica.com.br/category/copy-invest/details/14183' }
 ]
 </script>
