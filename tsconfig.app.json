@@ -1,14 +1,22 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
+    /* Arquivo temporário para build incremental */
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Linting e Regras de Tipo */
+    "strict": true, // Habilita todas as verificações estritas do TypeScript
+    "noUnusedLocals": true, // Proíbe variáveis locais declaradas mas não usadas
+    "noUnusedParameters": true, // Proíbe parâmetros de função não utilizados
+    "noFallthroughCasesInSwitch": true, // Garante que switch-case não "caia" sem controle
+    "noUncheckedSideEffectImports": true, // Evita imports que podem ter efeitos colaterais não verificados
+
+    /* Suporte para caminhos */
+    "baseUrl": ".", // Base para resolução de módulos
+    "paths": {
+      "@/*": ["src/*"] // Alias para facilitar importações
+    }
   },
+  /* Inclusão de arquivos */
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
